@@ -1,9 +1,9 @@
 let k8s;
 
 if (process.versions.fibjs) {
-    const vm = require('vm');
-    const http = require('http');
-    const url = require('url');
+    const vm = await import('vm');
+    const http = await import('http');
+    const url = await import('url');
 
     async function _fetch(href, opts) {
         if (href instanceof url.URL)
